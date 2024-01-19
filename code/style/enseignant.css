@@ -1,0 +1,249 @@
+/* Main styles for the entire body */
+body {
+  margin: 0;
+  height: 100rem;
+  overflow: hidden;
+  background-color: #ececec;
+}
+
+/* Styling for images */
+img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Button styles */
+button {
+  background-color: #3ea30088;
+  font-size: x-large;
+  padding: 1em;
+  margin: 0.5rem;
+  border-radius: 15px;
+  border: none;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #3ea300;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* Disabled button styles */
+button:disabled {
+  color: #979797;
+}
+
+/* Styles for specific buttons with class .parcourDePageBtn */
+.parcourDePageBtn {
+  background-color: #ececec;
+  border-bottom: #ececec 5px solid;
+  padding: 1em;
+  gap: 0.2rem;
+  border-radius: 0;
+}
+
+/* Hover effect for .parcourDePageBtn */
+.parcourDePageBtn:hover {
+  border-bottom: #3ea30088 5px solid;
+  background-color: #ececec;
+}
+
+/* Styles for elements with class .critique */
+.critique {
+  background-color: #ff8282;
+}
+
+/* Hover effect for .critique */
+.critique:hover {
+  background-color: #ff3636;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  margin: 0;
+}
+
+/* Heading styles */
+h1 {
+  padding: 20px 20%;
+  margin: 0;
+  font-size: 5rem;
+}
+
+/* Styles for the list of contents */
+#liseContenus {
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+}
+
+#liseContenus li {
+  background-color: white;
+  border-radius: 15px;
+  font-size: x-large;
+  padding: 0 1rem;
+  margin: 0.7rem;
+}
+
+/* Styles for elements with class .divEnLigne */
+.divEnLigne {
+  display: flex;
+  font-size: x-large;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles for the main content area */
+#mainContenu {
+  width: 90%;
+  margin-left: 10rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styles for the page navigation section */
+#parcourPage {
+  margin: 0 auto;
+  bottom: 0;
+}
+
+/* Styles for the breadcrumb navigation */
+#filDAriande {
+  background-color: #3ea30088;
+  font-size: x-large;
+  list-style-type: none;
+  display: grid;
+  gap: 0;
+  grid-auto-flow: column;
+  justify-content: left;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+#filDAriande li {
+  margin: 0;
+}
+
+#filDAriande li a,
+#filDAriande li p {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+#filDAriande li a:hover {
+  color: black;
+}
+
+/* Styles for the progression section */
+.progression {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the main content area */
+#corpDePage {
+  height: 100%;
+}
+
+#corpDePage ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: last baseline;
+  height: 100%;
+}
+
+/* Styles for the progress bar */
+.progressBar {
+  width: 100%;
+  height: 20%px; /* Note: There seems to be a typo here, it should probably be '20px' instead of '20%px' */
+  background-color: #4b4b4b;
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+/* Styles for the lateral menu for teachers */
+#menuLateralEnseignant {
+  width: 15%;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  text-align: center;
+}
+
+#menuLateralEnseignant aside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menuLateralEnseignant aside button {
+  color: white;
+}
+
+/* Styles for the progress bar fill */
+.progressBar::-webkit-progress-value,
+.progressBar::-moz-progress-bar {
+  background-color: #808080;
+}
+
+/* Styles for the container of student progress */
+.progEleveContainer {
+  list-style-type: none;
+  text-align: left;
+  width: 90%;
+  height: 2%;
+  padding: 0;
+}
+
+/* Styles for the grid layout of student progress */
+.tabProgressionEleve {
+  background-color: #ececec;
+  font-size: large;
+  padding: 0 1rem;
+  margin: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for specific elements with class .T1, .T2, .T3, .T4 */
+.T1,
+.T2,
+.T3,
+.T4 {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  justify-content: left;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Styles for paragraphs inside elements with class .T1, .T2, .T3, .T4 */
+.T1 p,
+.T2 p,
+.T3 p,
+.T4 p {
+  width: 40%;
+}

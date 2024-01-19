@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/burgerMenu.css" />
+    <link rel="stylesheet" href="../style/styleEleve.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>TerraForma</title>
+  </head>
+  <body id="planete">
+    <div id="chargement"></div>
+    <header>
+      <div id="root">
+        <div id="topnav" class="topnav">
+          <a
+            id="topnav_hamburger_icon"
+            href="javascript:void(0);"
+            onclick="showResponsiveMenu()"
+          >
+            <!-- Some spans to act as a hamburger -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <!-- Responsive Menu -->
+          <nav role="navigation" id="topnav_responsive_menu">
+            <ul>
+              <a href="">Consulter mes scores</a>
+              <hr />
+              <a href="">Mentions légales</a>
+              <a href="">Aide</a>
+              <a href="">Nous contacter</a>
+              <hr />
+              <a href="">Gérer mon compte</a>
+              <a href="index.html">Déconnexion</a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <a id="name-student" class="" href="">Nom de l'élève | Groupe</a>
+    <div id="menu-planete" class="invisible">
+      <div>
+        <h2 class="vertH" id="sousTheme">La planète Terre</h2>
+        <ul>
+          <button onclick="ouvrirJeu(1)">
+            <li>
+              La dynamique de la Terre et ses conséquences
+              <hr />
+              <div class="conteneur">
+                <div>100%</div>
+                <div class="barreProgression vert" style="width: 100%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(2)">
+            <li>
+              Les changements climatiques et l'être humain
+              <hr />
+              <div class="conteneur">
+                <div>100%</div>
+                <div class="barreProgression vert" style="width: 100%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(3)">
+            <li>
+              La prévision et la prévention des risques planétaires
+              <hr />
+              <div class="conteneur">
+                <div>100%</div>
+                <div class="barreProgression vert" style="width: 100%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(4)">
+            <li>
+              Les ressources naturelles des écosystèmes et les activités
+              humaines
+              <hr />
+              <div class="conteneur">
+                <div>85%</div>
+                <div class="barreProgression vert" style="width: 85%"></div>
+              </div>
+            </li>
+          </button>
+        </ul>
+      </div>
+      <div>
+        <h2 class="bleuH">Le vivant et son évolution</h2>
+        <ul>
+          <button onclick="ouvrirJeu(5)">
+            <li>
+              La nutrition des êtres vivants
+              <hr />
+              <div class="conteneur">
+                <div>10%</div>
+                <div class="barreProgression bleu" style="width: 10%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(6)">
+            <li>
+              La dynamique des populations
+              <hr />
+              <div class="conteneur">
+                <div>0%</div>
+                <div class="barreProgression bleu" style="width: 0%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(7)">
+            <li>
+              La diversité génétique des individus
+              <hr />
+              <div class="conteneur">
+                <div>0%</div>
+                <div class="barreProgression bleu" style="width: 0%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(8)">
+            <li>
+              Les classifications et les facteurs influençant l’évolution
+              <hr />
+              <div class="conteneur">
+                <div>0%</div>
+                <div class="barreProgression bleu" style="width: 0%"></div>
+              </div>
+            </li>
+          </button>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rougeH">Le corps humain et la santé</h2>
+        <ul>
+          <button onclick="ouvrirJeu(9)">
+            <li>
+              Les perturbations du système nerveux
+              <hr />
+              <div class="conteneur">
+                <div>100%</div>
+                <div class="barreProgression rouge" style="width: 100%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(10)">
+            <li>
+              L'alimentation humaine et la santé
+              <hr />
+              <div class="conteneur">
+                <div>80%</div>
+                <div class="barreProgression rouge" style="width: 80%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(11)">
+            <li>
+              La lutte contre les micro-organismes pathogènes
+              <hr />
+              <div class="conteneur">
+                <div>60%</div>
+                <div class="barreProgression rouge" style="width: 60%"></div>
+              </div>
+            </li>
+          </button>
+          <button onclick="ouvrirJeu(12)">
+            <li>
+              Des comportements responsables vis-à-vis de la sexualité
+              <hr />
+              <div class="conteneur">
+                <div>0%</div>
+                <div class="barreProgression rouge" style="width: 0%"></div>
+              </div>
+            </li>
+          </button>
+        </ul>
+      </div>
+    </div>
+    <div id="planete"></div>
+    <!-- Modal Pop-up -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content pop">
+        <!-- Ajoutez la classe pop ici -->
+        <span class="close" onclick="closeHelpModal()">&times;</span>
+        <p>
+          Bienvenue dans Terraforma! 🌍<br />
+          Appuie sur la planète et choisis ton thème pour commencer à jouer! 🚀
+        </p>
+      </div>
+    </div>
+    <button id="rondCurseur"></button>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="../js/planeteEleve(new).js"></script>
+    <script src="../js/menuBurger.js"></script>
+    <script src="../js/popUp.js"></script>
+    <script src="../js/ouvrirQuestion.js"></script>
+  </body>
+</html>

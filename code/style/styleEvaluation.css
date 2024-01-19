@@ -1,0 +1,114 @@
+/* Général --------------------------------*/
+@font-face {
+    font-family: outfit;
+    src: url(font/Outfit-VariableFont_wght.ttf);
+}
+body {
+    font-family: outfit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    resize: none;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.4em;
+    margin-top: 0;
+}
+main {
+    background-color: white;
+    height: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px;
+}
+h2 {
+    text-align: right;
+    margin-top: 0;
+    font-size: 1em;
+}
+#conteneur {
+    background-color: white;
+    margin: 0 10px;
+    height: 1.7em;
+    border-radius: 5px;
+    position: relative;
+}
+#barreProgression {
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(71, 108, 228, 0.859);
+}
+#conteneur div:first-child {
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    font-weight: 700;
+}
+button {
+    width: 200px;
+    font-size: 1em;
+    line-height: 2em;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    border: none;
+    font-weight: 700;
+}
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#quitter {
+    background-color: rgb(207, 88, 79);
+    left: 10px;
+}
+#suivant {
+    background-color: rgb(79, 189, 79);
+    right: 10px;
+}
+/*
+body > a {
+    display: flex;
+    gap: 40px;
+    height: 4em;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    margin: 0 20px;
+    background-color: white;
+}
+body > a:hover {
+    text-decoration: underline;
+    box-shadow: rgba(255, 255, 255, 0.541) 0px 3px 8px;
+}
+body > a:not(.dispo) {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+
+.rond {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.vert {
+    background-color: rgb(79, 189, 79);
+}
+.jaune {
+    background-color: rgb(237, 186, 99);
+}
+.rouge {
+    background-color: rgb(207, 88, 79);
+}*/

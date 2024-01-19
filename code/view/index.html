@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TerraForma</title>
+    <link rel="stylesheet" href="../style/styleIndex.css" />
+    <link rel="icon" type="image/png" href="../img/icone_terraforma.jpg" />
+  </head>
+  <body id="index">
+    <header>
+      <h1>TerraForma</h1>
+    </header>
+    <main>
+      <h2><span>Explorez</span>, apprenez et grandissez avec Terraforma.</h2>
+      <h3>Le jeu ludo-éducatif qui cultive le savoir et la créativité.</h3>
+      <a href="creationCompte.html">Créer un compte</a>
+      <h2 id="connexion">Connexion :</h2>
+      <div>
+        <a href="connexionEleve.html">Elève</a>
+        <a href="connexionEnseignant.html">Enseignant</a>
+      </div>
+      <div id="cercle">
+        <img src="../img/planeteMenu.png" id="planete1" />
+        <img src="../img/planeteMenu.png" id="planete2" />
+      </div>
+    </main>
+    <footer>
+      <a href="">Mentions légales</a>
+      <a href="">Aide</a>
+      <a href="">Nous contacter</a>
+    </footer>
+
+    <!-- Cookie Popup -->
+    <div id="cookiePopup">
+      <p>
+        <span style="font-weight: bold">TerraForma</span> recueille et exploite
+        des données essentielles indispensables au bon fonctionnement de ses
+        services. Nous accordons une grande importance à la confidentialité et à
+        la sécurité des informations collectées, veillant ainsi à garantir une
+        expérience utilisateur optimale. Ces données sont traitées avec le plus
+        grand soin et sont strictement utilisées dans le cadre des
+        fonctionnalités offertes par TerraForma, conformément à notre engagement
+        envers la protection de la vie privée de nos utilisateurs
+      </p>
+      <button onclick="acceptCookies()">Accepter les cookies</button>
+    </div>
+    <div id="overlay"></div>
+    <script>
+      // Check if the user has accepted cookies
+      if (!localStorage.getItem("cookiesAccepted")) {
+        showCookiePopup();
+      }
+    
+      function showCookiePopup() {
+        document.getElementById("cookiePopup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+    
+      function acceptCookies() {
+        localStorage.setItem("cookiesAccepted", "true");
+        document.getElementById("cookiePopup").classList.add('fermeturePopUp');
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/Drag&Drop.css" />
+    <title>Drag and Drop</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        id="sentence"
+        class="sentence"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <!-- Énoncé à trous -->
+        Associez le gaz à effet de serre à son impact sur le climat : Dioxyde de
+        carbone (CO2)
+        <span
+          id="1"
+          class="blank"
+          data-position="1"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></span>
+        Méthane (CH4)
+        <span
+          id="2"
+          class="blank"
+          data-position="2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></span>
+        Protoxyde d'azote (N2O)
+        <span
+          id="3"
+          class="blank"
+          data-position="3"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></span>
+      </div>
+
+      <div id="wordList" class="word-list">
+        <!-- Liste de mots à déplacer -->
+        <div
+          id="word1"
+          class="word draggable"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-position-correct="1" 
+        >
+          Augmentation de la température
+        </div>
+        <div
+          id="word2"
+          class="word draggable"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-position-correct="2"
+        >
+          Augmentation des pluies acides
+        </div>
+        <div
+          id="word3"
+          class="word draggable"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-position-correct="3" 
+        >
+          Augmentation de l'effet de serre
+        </div>
+      </div>
+
+      <div class="check">
+        <button onclick="checkAnswer()">Vérifier</button>
+        <button onclick="resetDragAndDrop()">Réinitialiser</button>
+      </div>
+    </div>
+
+    <script src="../js/Drag&Drop.js"></script>
+  </body>
+</html>

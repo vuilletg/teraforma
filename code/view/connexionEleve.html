@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/styleConnexion.css" />
+    <title>TerraForma</title>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <h1>TerraForma</h1>
+        <h1>S'identifier - Elève</h1>
+        <p>Entrer vos informations</p>
+        <form id="connexion">
+          <div>
+            <input required="" type="text" name="login" />
+            <label>Login</label>
+          </div>
+          <div>
+            <input required="" type="password" name="mdp" />
+            <label>Mot de passe</label>
+          </div>
+          <p id="mdpOublier" onclick="showForgotPasswordModal()">
+            J'ai oublié mon mot de passe
+            <span style="font-size: large">&#x1FAE0;</span> !
+          </p>
+          <!-- Modal pour la récupération du mot de passe -->
+          <div id="forgotPasswordModal" class="modal">
+            <h2>Récupération du mot de passe</h2>
+            <button onclick="sendPasswordRecoveryEmail()">
+              Notifier votre Enseignant !
+            </button>
+            <span  class="close"onclick="closeForgotPasswordModal()">&times;</span>
+          </div>
+          <input type="submit" value="Connexion" />
+          <p>
+            Vous n'avez pas encore de compte ?
+            <a href="../view/creationCompte.html">S'inscrire</a>
+          </p>
+        </form>
+      </div>
+      <div class="right">
+        <div>Faites glisser votre souris pour vous déplacer !</div>
+      </div>
+      <a href="pagePrincipaleEleve(new).html" id="back">Retour</a>
+    </main>
+    <footer>
+      <a href="#">Mentions légales</a>
+      <a href="#">Aide</a>
+      <a href="#">Nous contacter</a>
+    </footer>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="../js/animationConnexion(new).js"></script>
+    <!--<script src="../js/planete-connexion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/three.js"></script>-->
+  </body>
+</html>

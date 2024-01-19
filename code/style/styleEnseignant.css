@@ -1,0 +1,670 @@
+/* Général --------------------------------*/
+@font-face {
+    font-family: outfit;
+    src: url(font/Outfit-VariableFont_wght.ttf);
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: outfit;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header --------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 20px;
+}
+h1 {
+    font-family: outfit;
+    font-size: 8em;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+}
+#retour {
+    background-color: #EEEEEE;
+    width: 6em;
+    line-height: 3em;
+    text-align: center;
+    border-radius: 1.5em;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: white;
+    background-color: #3EA300;
+}
+#retour:hover {
+    text-decoration: underline;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body > nav {
+    background-color: #3EA300;
+    line-height: 2em;
+    color: white;
+    font-size: 1.5em;
+    padding-left: 20px;
+}
+#filDArianne a {
+    text-decoration: none;
+    color: white;
+}
+#filDArianne a:hover {
+    text-decoration: underline;
+}
+/* Main --------------------------------*/
+main {
+    display: flex;
+    min-height: 100%;
+    height: fit-content;
+    flex: 1;
+}
+/* Aside */
+aside {
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 1em;
+    flex-direction: column;
+}
+aside img {
+    height: 60px;
+    width: 60px;
+    margin: 0 15px;
+    color: white;
+}
+aside a, aside input[type=submit], aside button {
+    text-decoration: none;
+    color: white;
+    background-color: #3EA300;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 4em;
+    border-radius: 10px;
+    transition: all 0.2s;
+    border: none;
+}
+aside button {
+    text-align: center;
+    display: block;
+}
+aside a:hover, aside input[type=submit]:hover, button:hover {
+    text-decoration: underline;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+aside input[type=submit] {
+    justify-content: center;
+}
+aside p {
+    width: 90%;
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+}
+aside input {
+    width: 90%;
+    box-sizing: border-box;
+    height: 4em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+aside form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+#loupe {
+    width: 40px;
+    height: 40px;
+}
+#export {
+    width: 35px;
+    height: 35px;
+}
+/* Article */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    flex-grow: 1;
+    padding-top: 2em;
+    gap: 10px;
+}
+article h2 {
+    font-size: 1.5em;
+    line-height: 2em;
+    margin: 0 0 0.8em 0;
+}
+/* Boutons article */ 
+article > a {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    height: 4em;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+    border-radius: 10px;
+    align-items: center;
+}
+article > a:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+article > a:hover p:first-child {
+    text-decoration: underline;
+
+}
+article p {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 3em;
+    margin-left: 30px;
+    flex-shrink: 0;
+}
+article > a > hr {
+    flex-grow: 1;
+    flex-basis: 100px;
+}
+main hr {
+    opacity: 0;
+}
+article button {
+    width: 4em;
+    height: 4em;
+    margin: auto 5px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+article button:hover {
+    background-color: #EEEEEE;
+}
+#conteneur {
+    background-color: #EEEEEE;
+    width: 400px;
+    height: 2em;
+    margin: 0 1em;
+    flex-shrink: 1;
+    border-radius: 1em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#conteneur div:not(#barreProgression) {
+    z-index: 2;
+    padding-left: 10px;
+}
+#barreProgression {
+    background-color: #79d541;
+    height: 100%;
+    border-radius: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+article span {
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+/* Navigation en bas de page*/
+article nav {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+article nav a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+}
+article nav a:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#pageCourante hr {
+    margin: 0;
+    height: 0.15em;
+    border: none;
+    width: 50%;
+    margin: auto;
+    background-color: #3EA300;
+    margin-top: 0.2em;
+    opacity: 1;
+}
+
+#gererEquipe {
+    aside {  
+        width: fit-content;
+        padding: 1em;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: start;
+        align-content: start;
+        gap: 20px;
+        flex-shrink: 1;
+    }
+    aside a {
+        width: 200px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    aside div {
+        height: 550px;
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    article {
+        gap: 20px;
+        flex-shrink: 0;
+    }
+    article a {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+        height: fit-content;
+        padding-bottom: 1em;
+    }
+    article a > div {
+        width: 30%;
+        height: fit-content;
+        text-align: center;
+    }
+    #conteneur {
+        height: 20px;
+        width: 100%;
+        margin: 0;
+    }
+    #barreProgression {
+        height: 100%;
+    }
+    article p {
+        width: 100%;
+        line-height: 2em;
+    }
+    #legende {
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #legende > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 16em;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    #legende div div {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+    }
+    #legende span {
+        padding: 0;
+    }
+    .vert {
+        background-color: rgb(79, 189, 79);
+    }
+    .bleu {
+        background-color: rgb(81, 134, 226);
+    }
+    .rouge {
+        background-color: rgb(219, 85, 85);
+    }
+}
+
+#creerClasse {
+    article {
+        flex-grow: 0;
+        width: 800px;
+        height: 500px;
+        margin: 5em auto;
+        background-color: #EEEEEE;
+        justify-content: center;
+        padding: 0;
+        border-radius: 1em;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1em;
+    }
+    main form div {
+        position: relative;
+    }
+    input {
+        width: 400px;
+        height: 3em;
+        box-sizing: border-box;
+        border: solid 1.5px #3EA300;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }  
+    label {
+        position: absolute;
+        left: 15px;
+        color: #3EA300;
+        pointer-events: none;
+        transform: translateY(1rem);
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    input:focus, input:valid {
+        outline: none;
+    }  
+    input:focus ~ label, input:valid ~ label {
+        transform: translateY(-50%) scale(0.8);
+        background: linear-gradient(to bottom, #EEEEEE 50%, #fff 50%);
+        padding: 0 0.2em;
+    }  
+    input[type=submit] {
+        border-radius: 1em;
+        background-color: #3EA300;
+        font-size: 1em;
+        color: white;
+        padding: 0;
+        transition: background-color 0.2s;
+    }   
+    input[type=submit]:hover {
+        text-decoration: underline;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    main > div {
+        border-radius: 50%;
+        border: 3px dashed #808080;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: -200px;
+        bottom: 50px;
+    }
+
+    .memClasse{
+        display: none;
+    }
+}
+
+
+#listeEleves {
+    h2 {
+        margin-bottom: 0;
+    }
+    aside:last-child{
+        width: 420px;
+    }
+    h3 {
+        color: #808080;
+        font-size: 1em;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    aside p {
+        margin-top: 30px;
+    }
+    aside {
+        gap: 15px;
+    }
+    aside table {
+        padding: 20px;
+        border-spacing: 0;
+    }
+    aside table thead {
+        text-decoration: underline;
+    }
+    aside table td {
+        padding-top: 10px;
+    }
+    aside table td:first-child {
+        padding-right: 20px;
+        border-right: 1px solid black;
+    }
+    aside table td:not(td:first-child) {
+        padding-left: 20px;
+    }
+    article {
+        flex-wrap: wrap;
+        align-content: start;
+        flex-direction: row;
+        justify-content: center;
+    }
+    article h2 {
+        width: 100%;
+        text-align: center;
+    }
+    article > div {
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    article h3 {
+        margin-bottom: 10px;
+    }
+    article hr {
+        margin: 0 auto 10px auto;
+        opacity: 1;
+    }
+    article div span {
+        display: flex;
+        width: 90%;
+        height: 30px;
+        border: 1px solid #808080;
+        margin: 5px auto;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    #liste, #poubelle {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 50px;
+    }
+    #liste div {
+        padding: 5px 10px;
+        border: 1px solid #808080;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    #liste div:hover {
+        cursor: grab;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #liste button {
+        height: 30px;
+        width: 30px;
+        margin-right: -5px;
+        display: none;
+    }
+    #liste button:hover {
+        box-shadow: none;
+        text-decoration: none;
+    }
+    #liste .suppr button {
+        display: block;
+    }
+    #poubelle {
+        min-height: 5em;
+        border: 5px dotted rgb(199, 31, 31);
+        background-image: url("../img/poubelleRouge.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50px;
+    }
+    #poubelle * {
+        display: none;
+    }
+}
+
+/* Responsive ----------------*/
+@media (min-width: 900px) and (max-width: 1100px) {
+    aside a img {
+        margin-right: 0;
+    }
+}
+@media (min-width: 956px) {
+    article {
+        width: 100px;
+    }
+}
+@media (max-width: 630px) {
+    aside div {
+        display: none;
+    }
+}
+@media (max-width: 955px) { 
+    #gererEquipe {
+        aside {
+            width: auto;
+            font-size: 0.8em;
+        }        
+    }
+    h1 {
+        font-size: 400%;
+    }
+    #filDArianne {
+        font-size: 1em;
+    }
+    body {
+        height: auto;
+    }
+    main:not(#listeEleves main) {
+        flex-direction: column-reverse;
+    }
+    #listeEleves main {
+        flex-direction: column;
+    }
+    aside {
+        width: 400px;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    article {
+        padding: 20px 0;
+        h2 {
+            font-size: 1.1em;
+        }
+        a {
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            padding: 5px;
+        }
+        p {
+            width: 100%;
+            line-height: 2em;
+            font-size: 1em;
+            margin-left: 10px;
+            margin-bottom: 15px;
+        }
+        span {
+            font-size: 1em;
+            padding-bottom: 5px;
+        }
+        hr:not(#pageCourante hr) {
+            display: none;
+        }
+        #conteneur {
+            height: 20px;
+            margin: 5px;
+        }
+        button {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+        }
+        button img {
+            height: 30px;
+            width: 30px;
+        }
+        button:nth-last-child(2){
+            right: 50px
+        }
+        nav {
+            position: relative;
+            font-size: 1em;
+        }
+        #pageCourante hr {
+            position: relative;
+        }
+    }
+    .topnav {
+        background-color: white;
+        box-shadow: none;
+    }   
+    #creerClasse {
+        article {
+            width: 90%;
+            margin: 10px auto;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        article ~ div {
+            display: none;
+        }
+        form {
+            width: 70%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 565px) {
+    h1 {
+        font-size: 200%;
+    }
+    #retour {
+        display: none;
+    }
+    #filDArianne {
+        font-size: 0.6em;
+    }   
+    aside {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    article table {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/burgerMenu.css">
+    <link rel="stylesheet" href="../style/styleEnseignant.css">
+    <link rel="stylesheet" href="../style/popUp.css">
+    <title>TerraForma</title>
+</head>
+<body>
+    <header>
+        <h1>TerraForma</h1>
+        <a href="pagePrincipaleEnseignant.html" id="retour">Retour</a>
+        <div id="root">
+            <div id="topnav" class="topnav">    
+                <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                  <!-- Some spans to act as a hamburger -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+            
+                <!-- Responsive Menu -->
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                    <a href="pagePrincipaleEnseignant.html">Retour page principale</a>
+                    <hr>
+                    <a href="">Mentions légales</a>
+                    <a href="">Aide</a>
+                    <a href="">Nous contacter</a>
+                    <hr>
+                    <a href="">Gérer mon compte</a>
+                    <a href="index.html">Déconnexion</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav id="filDArianne"><a href="pagePrincipaleEnseignant.html">Exemple nom professeur</a> / Gérer classe : Exemple nom classe</nav>
+    <main>
+        <aside>
+            <p>Chercher un élève :</p>
+            <input type="text" placeholder="Entrez le nom de l'élève">
+            <a href=""><img src="../img/iconeLoupeBlanc.png" alt="" id="loupe">Chercher élève</a>
+        </aside>
+        <article>
+            <h2>Vos groupes d'élèves :</h2>
+            <a href="gererEquipe.html" id="container1" data-popup-content="exemple nom classe 1">
+                <p>Exemple nom groupe</p>
+                <hr>
+                <span>Progression :</span>
+                <div id="conteneur"><div>50%</div><div id="barreProgression" style="width: 50%;"></div></div>
+                <button class="modifier popup-button"></button>
+                <button class="supprimer popup-button"></button>
+            </a>
+            <a href="gererEquipe.html" id="container1" data-popup-content="exemple nom classe 1">
+                <p>Exemple nom groupe</p>
+                <hr>
+                <span>Progression :</span>
+                <div id="conteneur"><div>30%</div><div id="barreProgression" style="width: 30%;"></div></div>
+                <button class="modifier popup-button"></button>
+                <button class="supprimer popup-button"></button>
+            </a>
+            <a href="gererEquipe.html" id="container1" data-popup-content="exemple nom classe 1">
+                <p>Exemple nom groupe</p>
+                <hr>
+                <span>Progression :</span>
+                <div id="conteneur"><div>80%</div><div id="barreProgression" style="width: 80%;"></div></div>
+                <button class="modifier popup-button"></button>
+                <button class="supprimer popup-button"></button>
+            </a>
+            <a href="gererEquipe.html" id="container1" data-popup-content="exemple nom classe 1">
+                <p>Exemple nom groupe</p>
+                <hr>
+                <span>Progression :</span>
+                <div id="conteneur"><div>10%</div><div id="barreProgression" style="width: 10%;"></div></div>
+                <button class="modifier popup-button"></button>
+                <button class="supprimer popup-button"></button>
+            </a>
+            <nav>
+                <a href="" id="pageCourante">1<hr></a>
+                <a href="">2<hr></a>
+                <a href="">3<hr></a>
+            </nav>
+            <div class="popup" id="myPopup">
+                <div class="popup-content">
+                    <p id="popupContent"></p>
+                    <button class="oui" onclick="closePopup()">Oui</button>
+                    <button class="non" onclick="closePopup()">Non</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="../js/menuBurger.js"></script>
+    <script src="../js/popUp.js"></script>
+</body>
+</html>

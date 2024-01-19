@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... Autres balises meta, liens CSS, etc. ... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="../style/planete.css" />
+    <link rel="stylesheet" href="../style/burgerMenu.css" />
+    <title>TerraForma</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="topnav" class="topnav">
+        <a id="name-student" class="" href="">Nom de l'élève | Groupe</a>
+
+        <a
+          id="topnav_hamburger_icon"
+          href="javascript:void(0);"
+          onclick="showResponsiveMenu()"
+        >
+          <!-- Some spans to act as a hamburger -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <!-- Responsive Menu -->
+        <nav role="navigation" id="topnav_responsive_menu">
+          <ul>
+            <li><a href="">Voir Progression</a></li>
+            <hr />
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Aide</a></li>
+            <li><a href="">Nous contacter</a></li>
+            <hr />
+            <li><a href="">Gérer mon compte</a></li>
+            <li><a href="index.html">Deconnexion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="menu-planete" style="display: none">
+      <!-- Contenu du menu -->
+      <ul type="none">
+        <li>
+          <span class="titre"
+            >La planète Terre, l’environnement et l’action humaine :</span
+          >
+          <!-- Sous-catégories pour le premier thème -->
+          <ul type="none">
+            <li>
+              <button class="exampleBtn">
+                <span>La dynamique de la Terre et ses conséquences</span>
+              </button>
+            </li>
+            <li>
+              <button class="exampleBtn">
+                <span>Les changements climatiques et l'être humain</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="titre">Le vivant et son évolution : </span>
+          <!-- Sous-catégories pour le deuxième thème -->
+          <ul type="none">
+            <li>
+              <button class="exampleBtn">
+                <span>La nutrition des êtres vivants</span>
+              </button>
+            </li>
+            <li>
+              <button class="exampleBtn">
+                <span>La diversité génétique des individus</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="titre">Le corps humain et la santé : </span>
+          <!-- Sous-catégories pour le troisième thème -->
+          <ul type="none">
+            <li>
+              <button class="exampleBtn">
+                <span>Les perturbations du système nerveux</span>
+              </button>
+            </li>
+            <li>
+              <button class="exampleBtn">
+                <span>
+                  Des comportements responsables vis-à-vis de la sexualité</span
+                >
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script src="../js/menuBurger.js"></script>
+    <script src="../js/three.js"></script>
+    <script type="module" src="../js/planete.js"></script>
+  </body>
+</html>

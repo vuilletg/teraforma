@@ -1,0 +1,281 @@
+/* Général --------------------------------*/
+@font-face {
+  font-family: outfit;
+  src: url(font/Outfit-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  font-family: outfit;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#planete canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#planete canvas:hover {
+  cursor: grab;
+}
+
+/* Header ----------------------------------*/
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e6e6e6;
+  border-radius: 0 0 0 30%;
+}
+body > a {
+  color: white;
+  position: absolute;
+  font-size: 1.3em;
+  padding: 15px;
+  z-index: 10;
+}
+
+/* Menu sélection --------------------------------*/
+#menu-planete {
+  box-sizing: content-box;
+  width: 700px;
+  height: fit-content;
+  padding: 20px 0;
+  border-radius: 20px;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition-property: transform;
+  transition-duration: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 11;
+}
+.invisible {
+  transform: translateX(-800px);
+}
+.visible {
+  transform: translateX(4%);
+}
+h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+#menu-planete {
+  ul li {
+    display: flex;
+  }
+  ul a,
+  ul button {
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    border: none;
+    font-family: outfit;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  ul a:hover,
+  ul button:hover {
+    text-decoration: underline;
+  }
+  hr {
+    flex-basis: 1px;
+    flex-grow: 1;
+    margin: 0;
+    opacity: 0;
+  }
+  .conteneur {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    /*border-radius: 10px;*/
+    position: relative;
+    right: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-right: 15px;
+    overflow-x: hidden;
+  }
+  .barreProgression {
+    height: 100%;
+    transform: translateX(-150px);
+    transition: transform 1.5s;
+  }
+  .apparition {
+    transform: translateX(0px);
+  }
+
+  .conteneur div:first-child {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+  }
+  .vert {
+    background-color: rgb(79, 189, 79);
+  }
+  .vertH {
+    color: rgb(79, 189, 79);
+  }
+  .bleu {
+    background-color: rgb(81, 134, 226);
+  }
+  .bleuH {
+    color: rgb(81, 134, 226);
+  }
+  .rouge {
+    background-color: rgb(219, 85, 85);
+  }
+  .rougeH {
+    color: rgb(219, 85, 85);
+  }
+}
+
+/* Boutons ---------------------------------------*/
+button {
+  background-color: #d9d9d9;
+  padding: 1em;
+  border: #d9d9d9 1px solid;
+  border-radius: 5px;
+}
+button:hover {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#rondCurseur {
+  display: flex;
+  width: 60vh;
+  height: 60vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  z-index: 5;
+  background: none;
+  border: none;
+}
+#rondCurseur:hover {
+  cursor: pointer;
+}
+
+#chargement {
+  background-color: black;
+  z-index: 101;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  animation: chargement 3s 1;
+  transform: translateY(-100vh);
+}
+
+@keyframes chargement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(
+      -100vh
+    ); /* Ajustez la distance de translation selon vos besoins */
+  }
+}
+
+/* Pop-Help ---------------------------------------*/
+
+/* Ajoutez cette classe pour déclencher l'animation pop */
+.pop {
+  animation: pop 0.3s cubic-bezier(0.36, 1.76, 0.6, 0.73);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the modal content */
+.modal-content {
+  position: relative;
+  background-color: #e5e7e6;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+  box-shadow: 2px 4px 9px 0px grey;
+  /* Appliquer l'animation pop ici */
+  transform-origin: center;
+}
+
+.modal-content p {
+  font-family: outfit;
+  font-weight: bold;
+}
+
+/* Ajoutez une animation pop */
+@keyframes modalPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Appliquez l'animation à la classe pop */
+.pop {
+  animation: modalPop 0.3s ease-out;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  top: 0px; /* Ajustez la valeur en fonction de votre préférence */
+  right: 10px; /* Ajustez la valeur en fonction de votre préférence */
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

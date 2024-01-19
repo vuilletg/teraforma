@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/burgerMenu.css">
+    <link rel="stylesheet" href="../style/styleEnseignant.css">
+    <title>TerraForma</title>
+</head>
+<body id="gererEquipe">
+    <header>
+        <h1>TerraForma</h1>
+        <a href="gererClasse.html" id="retour">Retour</a>
+        <div id="root">
+            <div id="topnav" class="topnav">    
+                <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                  <!-- Some spans to act as a hamburger -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+            
+                <!-- Responsive Menu -->
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                    <a href="pagePrincipaleEnseignant.html">Retour page principale</a>
+                    <hr>
+                    <a href="">Mentions légales</a>
+                    <a href="">Aide</a>
+                    <a href="">Nous contacter</a>
+                    <hr>
+                    <a href="">Gérer mon compte</a>
+                    <a href="index.html">Déconnexion</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav id="filDArianne"><a href="pagePrincipaleEnseignant.html">Exemple nom professeur</a> / <a href="gererClasse.html">Exemple nom classe</a> / Gérer équipe : Exemple nom d'équipe</nav>
+    <main>
+        <aside>
+            <a href="">Modifier groupe</a>
+            <a href="">Exporter résultats détaillés</a>
+            <div></div>
+        </aside>        
+        <article>
+            <h2>Vos élèves :</h2>
+            <div id="legende">
+                <div>
+                    <div class="vert"></div>
+                    <span>La planète Terre</span>
+                </div>
+                <div>
+                    <div class="bleu"></div>
+                    <span>Le vivant et son évolution</span>
+                </div>
+                <div>
+                    <div class="rouge"></div>
+                    <span>Le corps humain et la santé</span>
+                </div>
+            </div>
+            <a href="">
+                <p>Exemple pseudo élève 1</p>
+                <div>
+                    <div id="conteneur"><div>10%</div><div id="barreProgression" class="vert" style="width: 10%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>30%</div><div id="barreProgression" class="bleu" style="width: 30%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>0%</div><div id="barreProgression" class="rouge" style="width: 0%;"></div></div>
+                </div>
+            </a>
+            <a href="">
+                <p>Exemple pseudo élève 2</p>
+                <div>
+                    <div id="conteneur"><div>80%</div><div id="barreProgression" class="vert" style="width: 80%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>90%</div><div id="barreProgression" class="bleu" style="width: 90%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>100%</div><div id="barreProgression" class="rouge" style="width: 100%;"></div></div>
+                </div>
+            </a>
+            <a href="">
+                <p>Exemple pseudo élève 3</p>
+                <div>
+                    <div id="conteneur"><div>10%</div><div id="barreProgression" class="vert" style="width: 10%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>50%</div><div id="barreProgression" class="bleu" style="width: 50%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>30%</div><div id="barreProgression" class="rouge" style="width: 30%;"></div></div>
+                </div>
+            </a>
+            <a href="">
+                <p>Exemple pseudo élève 4</p>
+                <div>
+                    <div id="conteneur"><div>80%</div><div id="barreProgression" class="vert" style="width: 80%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>20%</div><div id="barreProgression" class="bleu" style="width: 20%;"></div></div>
+                </div>
+                <div>
+                    <div id="conteneur"><div>60%</div><div id="barreProgression" class="rouge" style="width: 60%;"></div></div>
+                </div>
+            </a>
+        </article>
+    </main>
+    <script src="../js/menuBurger.js"></script>
+</body>
+</html>

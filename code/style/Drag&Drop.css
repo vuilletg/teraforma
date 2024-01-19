@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.sentence {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 20px auto; /* Ajout de margin: 20px auto; pour centrer la div */
+    max-width: 750px; /* Ajout d'une largeur maximale pour éviter qu'elle ne devienne trop large */
+}
+
+
+.blank {
+    display: inline-block;
+    border: 2px dashed #ccc; /* Ajout d'une bordure en pointillés pour les espaces vides */
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
+}
+
+.blank:not(:empty) {
+    margin: 5;
+}
+
+.word-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.word {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 5px;
+    cursor: move;
+}
+
+button {
+    margin: 0px 5px 0px 5px;
+}

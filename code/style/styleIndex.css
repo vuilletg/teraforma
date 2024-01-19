@@ -1,0 +1,319 @@
+/* Général ------------------*/
+@font-face {
+  font-family: outfit;
+  src: url(font/Outfit-VariableFont_wght.ttf);
+}
+body {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: outfit;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Header ------------------*/
+header {
+  display: flex;
+  padding: 1.6em 0.5em;
+  height: 8em;
+  justify-content: center;
+  font-size: 2em;
+}
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* Main ------------------*/
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+/* boutons connexion et création compte */
+main a, button {
+  font-size: 1.3em;
+  width: 10em;
+  line-height: 2.5em;
+  text-align: center;
+  background-color: #3ea300;
+  border-radius: 2em;
+  color: white;
+  transition: all 0.2s;
+  text-decoration: none;
+  border: none;
+}
+main a:hover, button:hover {
+  background-color: #5eca1b;
+  text-decoration: underline;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 11em;
+  cursor: pointer;
+}
+main div {
+  /* pour la disposition des boutons */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+/* Slogan et titres parties*/
+h2 {
+  font-size: 3em;
+  margin: 0;
+}
+h3 {
+  color: #808080;
+  margin: 0 0 1.5em 0;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+span {
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-color: #3ea300;
+  text-decoration-thickness: 0.1em;
+}
+#connexion {
+  text-decoration: underline;
+}
+
+/* Animation planète sur la gauche */
+#cercle {
+  border: 0.4em dashed #808080;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+}
+#planete1,
+#planete2 {
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 8.5vw;
+  -webkit-animation: circle 40s linear infinite;
+  animation: circle 40s linear infinite;
+}
+#planete2 {
+  opacity: 0;
+  animation-delay: 20s;
+}
+@-webkit-keyframes circle {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(calc(-12.5vw * 0.7071))
+      translateX(calc(-12.5vw * 0.7071)) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) translateY(calc(-12.5vw * 0.7071))
+      translateX(calc(-12.5vw * 0.7071)) rotate(-360deg);
+  } /*0.7071 = sin(45°) pour commencer en haut à gauche*/
+}
+@keyframes circle {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(calc(-12.5vw * 0.7071))
+      translateX(calc(-12.5vw * 0.7071)) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) translateY(calc(-12.5vw * 0.7071))
+      translateX(calc(-12.5vw * 0.7071)) rotate(-360deg);
+  }
+}
+
+/*#cookiePopup {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 30px); /* Adjusted width to account for margins *//*
+  margin: 0 ; /* Adjusted margins *//*
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  z-index: 1000; /* Ensure the popup appears above the overlay *//*
+}
+#cookiePopup button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}*/
+
+#cookiePopup {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px 30px 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  z-index: 11;
+  font-weight: 200;
+}
+#cookiePopup button {
+  width: fit-content;
+  padding: 0 2em;
+}
+#cookiePopup button:hover {
+  padding: 0 3em;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 10; /* Ensure the overlay is behind the popup but above the main content */
+}
+.fermeturePopUp {
+  animation: fermeturePopUp 0.5s forwards;
+}
+
+@keyframes fermeturePopUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50vh); /* Ajustez la distance de translation selon vos besoins */
+    display: none;
+  }
+}
+
+/* Footer ------------------*/
+footer {
+  width: 60%;
+  margin: 5em 20% 0 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer a {
+  width: 12em;
+  height: 2em;
+  line-height: 1.8em;
+  text-align: center;
+  color: #808080;
+}
+footer a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Responsive ---------------------------------------*/
+/* ordis */
+@media (min-width: 1021px) {
+  h1 {
+    font-size: 500%;
+  }
+  #connexion {
+    margin: 0.9em 0 0.6em 0;
+  }
+  #cercle {
+    position: absolute;
+    left: -12.5vw;
+    bottom: 6vw;
+  }
+}
+
+/* tablettes*/
+@media (min-width: 651px) and (max-width: 1020px) {
+  h1 {
+    font-size: 330%;
+    height: 2em;
+  }
+  #connexion {
+    margin: 0.9em 0 0.6em 0;
+  }
+  h2 {
+    font-size: 175%;
+  }
+  #cercle {
+    position: relative;
+    margin-top: 2em;
+  }
+  header {
+    margin-bottom: 0;
+    height: 3em;
+  }
+  #planete2 {
+    display: none;
+  }
+  a {
+    z-index: 1;
+  }
+  #planete1 {
+    height: 6em;
+    width: 6em;
+    bottom: 6vw;
+    z-index: 0;
+  }
+  footer {
+    margin-top: 5em;
+  }
+}
+/* téléphones */
+@media (max-width: 650px) {
+  body {
+    gap: 0;
+  }
+  header {
+    height: 2em;
+  }
+  main a {
+    font-size: 100%;
+    margin: auto;
+    width: 10em;
+  }
+  main div {
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5em;
+  }
+  h1 {
+    font-size: 150%;
+  }
+  h2:first-child {
+    background-color: #3ea300;
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+  }
+  h2,
+  h3 {
+    font-size: 100%;
+    margin: 0;
+    width: 90%;
+  }
+  h3 {
+    margin-bottom: 2em;
+  }
+  #cercle,
+  #planete1,
+  #planete2,
+  #connexion {
+    display: none;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    margin: 3em 0 0 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}

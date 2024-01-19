@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/styleConnexion.css" />
+    <title>TerraForma</title>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <h1>TerraForma</h1>
+        <h1>S'inscrire</h1>
+        <p>Entrer vos informations</p>
+        <form method="post" id="inscription" class="form">
+          <div>
+            <input type="text" name="login" id="login" autocomplete="off"/>
+            <label class="erreurTxt" id="loginTxt">Login</label>
+          </div>
+          <div id="erreurLogin" class="erreur"></div>
+          <div>
+            <input type="text" name="mail" id="mail" autocomplete="off"/>
+            <label class="erreurTxt" id="mailTxt">Mail</label>
+          </div>
+          <div id="erreurMail" class="erreur"></div>
+
+          <div>
+            <input id="mdp" type="password" name="mdp" autocomplete="off"/>
+            <label class="erreurTxt" id="mdpTxt">Mot de passe</label>
+          </div>
+          <div id="erreurMdp" class="erreur"></div>
+          <div>
+            <input type="password" name="mdp2" id="mdp2" autocomplete="off"/>
+            <label class="erreurTxt" id="mdp2Txt">Confirmation</label>
+          </div>
+          <div id="erreurMdp2" class="erreur"></div>
+          <div class="checkbox">
+            <input type="checkbox" value="ok" id="checkbox" name="checkbox">
+            <label for="checkbox">Je confirme avoir plus de 18 ans</label>
+          </div>
+
+          <input type="submit" value="Créer un compte">
+          <div id="erreurInput" class="erreur"></div>
+        </form>
+      </div>
+
+      <div class="right">
+        <div>Faites glisser votre souris pour vous déplacer !</div>
+      </div>
+      <a href="index.html" id="back">Retour</a>
+    </main>
+    <footer>
+      <a href="#">Mentions légales</a>
+      <a href="#">Aide</a>
+      <a href="#">Nous contacter</a>
+    </footer>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="../js/animationConnexion(new).js"></script>
+    <script src="../controler/js/creation.ctrl.js"></script>
+  </body>
+</html>

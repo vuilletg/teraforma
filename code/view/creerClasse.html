@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/burgerMenu.css">
+    <link rel="stylesheet" href="../style/styleEnseignant.css">
+    <title>TerraForma</title>
+</head>
+<body id="creerClasse">
+    <header>
+        <h1>TerraForma</h1>
+        <a href="pagePrincipaleEnseignant.html" id="retour">Retour</a>
+        <div id="root">
+            <div id="topnav" class="topnav">    
+                <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                  <!-- Some spans to act as a hamburger -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+            
+                <!-- Responsive Menu -->
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                    <a href="pagePrincipaleEnseignant.html">Retour page principale</a>
+                    <hr>
+                    <a href="">Mentions légales</a>
+                    <a href="">Aide</a>
+                    <a href="">Nous contacter</a>
+                    <hr>
+                    <a href="">Gérer mon compte</a>
+                    <a href="index.html">Déconnexion</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav id="filDArianne"><a href="pagePrincipaleEnseignant.html">Exemple nom professeur</a> / Créer une classe</nav>
+    <main>
+        <article>
+            <h2>Création de classe</h2>
+            <form method="post" id="creerClasseForm" class="form" >
+                <div>
+                    <input type="text" name="nomClasse" id="name"/>
+                    <label class="erreurTxt" id="nameTxt">Nom classe</label>
+                </div>
+                <div id="erreurName" class="erreur"></div>
+                <div>
+                    <input type="text" name="nbEleve" id="nb"/>
+                    <label class="erreurTxt" id="nbTxt">Nombre d'élève</label>
+                </div>
+                <div id="erreurNb" class="erreur"></div>
+                <input type="submit" value="Créer classe">
+                <div id="memClasse"></div>
+            </form>
+        </article>
+        <div></div>
+    </main>
+    <script src="../js/menuBurger.js"></script>
+    <script src="../js/creerClasse.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+@font-face {
+  font-family: outfit;
+  src: url(font/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  align-items: flex-end;
+  background-image: url(../img/image_captage_co2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Cette propriété assure que l'image couvre toute la page */
+  background-position: center; /* Centre l'image sur la page */
+}
+
+#quiz-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  height: 20%;
+  margin: 15px;
+  padding: 20px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  bottom: 0%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Couleur blanche avec opacité à 10% */
+}
+
+#quiz-container * {
+  /* Cette règle exclut les enfants du conteneur de l'effet d'opacité */
+  opacity: 1 !important;
+}
+
+#question {
+  margin-bottom: 20px;
+}
+
+#answers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#answers label {
+  width: 45%; /* Ajustez la largeur selon vos besoins */
+  margin: 10px;
+}
+
+#answers label:nth-child(odd) {
+  margin-right: auto; /* Positionne le premier label de chaque ligne à gauche */
+}
+
+/* Ajoutez des styles responsives si nécessaire */
+@media screen and (max-width: 600px) {
+  #answers label {
+    width: 100%; /* Pour s'adapter à la largeur de l'écran sur les petits écrans */
+  }
+}
+
+#Vérifier,
+#Suivant {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  left: 25%; /* Ajustez cette valeur pour centrer horizontalement le bouton */
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #3ea300;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-family: "outfit", sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  border: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+
+#Vérifier:hover {
+  background-color: #3ea300;
+  transform: scale(0.9);
+  transition: 0.3s ease-in;
+}
+
+#NumQuestion {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  background-color: #3ea300;
+  color: aliceblue;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#explanation {
+  margin-top: 10px;
+}
